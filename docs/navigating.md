@@ -4,7 +4,7 @@ title: Moving between screens
 sidebar_label: Moving between screens
 ---
 
-In the previous section, ["Hello React Navigation"](hello-react-navigation.html), we defined a stack navigator with two routes (`Home` and `Details`), but we didn't learn how to let a user navigate from `Home` to `Details` (although we did learn how to change the _initial_ route in our code, but forcing our users to clone our repository and change the route in our code in order to see another screen is arguably among the worst user experiences one could imagine).
+In the previous section, ["Hello React Navigation"](hello-react-navigation.html), we defined a stack navigator with two routes (`Home` and `Details`), but we didn't learn how to let a user navigate from `Home` to `Details` (we did learn how to change the _initial_ route in our code, but forcing our users to clone our repository and change the route in our code in order to see another screen is arguably among the worst user experiences one could imagine).
 
 If this was a web browser, we'd be able to write something like this:
 
@@ -124,7 +124,7 @@ class DetailsScreen extends React.Component {
 
 > On Android, React Navigation hooks in to the hardware back button and fires the `goBack()` function for you when the user presses it, so it behaves as the user would expect.
 
-Another common requirement is to be able to go back _multiple_ screens -- for example, if you are several screens deep in a stack and want to dismiss all of them to go back to the first screen. In this case, we know that we want to go back to `Home` so we can use `navigate('Home')` (not `push`! try that out and see the difference). Another alternative would be `navigation.popToTop()`, which goes back to the first screen in the stack.
+Another common requirement is to be able to go back _multiple_ screens -- for example, if you are several screens deep in a stack and want to dismiss all of them to go back to the first screen. In this case, we know that we want to go back to `Home` so we can use `navigate('Home')` (not `push` -- try that out to see the difference!). Another alternative would be `navigation.popToTop()`, which goes back to the first screen in the stack.
 
 ## Summary
 
